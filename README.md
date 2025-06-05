@@ -21,5 +21,8 @@ TaskBuddy is a simple React-based task management application. It lets you add, 
 - Remove tasks from the list.
 - Tasks are grouped under a sticky date header so the date remains visible while scrolling.
 - Sleek styling and subtle animations enhance usability.
+- Each task shows the date it was added.
+- Sleek styling and subtle animations enhance usability.
+
 
 This project is a minimal starting point for a Todoist-like application. Feel free to expand upon it with more advanced features such as due dates, labels, or persistent storage.
