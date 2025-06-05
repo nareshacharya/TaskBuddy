@@ -34,11 +34,26 @@ body {
   outline: none;
   padding: 8px;
   margin-right: 8px;
+
 }
 
 .task-list {
   list-style: none;
   padding: 0;
+}
+
+.task-group {
+  margin-bottom: 20px;
+}
+
+.task-group-header {
+  position: sticky;
+  top: 0;
+  background: #f0f0f0;
+  padding: 6px 10px;
+  font-weight: 500;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
 .task-list li {

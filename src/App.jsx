@@ -26,6 +26,13 @@ function App() {
     setTasks(updated);
   };
 
+  const groupedTasks = tasks.reduce((groups, task, index) => {
+    const group = groups[task.date] || [];
+    group.push({ ...task, index });
+    groups[task.date] = group;
+    return groups;
+  }, {});
+
   return (
     <div className="app">
       <h1>TaskBuddy</h1>
@@ -39,6 +46,28 @@ function App() {
         />
         <button onClick={addTask}>Add</button>
       </div>
+
+      <div className="task-groups">
+        {Object.entries(groupedTasks).map(([date, items]) => (
+          <div key={date} className="task-group">
+            <div className="task-group-header">{date}</div>
+            <ul className="task-list">
+              {items.map((task) => (
+                <li key={task.index} className={task.completed ? 'completed' : ''}>
+                  <input
+                    type="checkbox"
+                    checked={task.completed}
+                    onChange={() => toggleTask(task.index)}
+                  />
+                  <span>{task.text}</span>
+                  <button onClick={() => removeTask(task.index)}>X</button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
       <ul className="task-list">
         {tasks.map((task, index) => (
           <li key={index} className={task.completed ? 'completed' : ''}>
@@ -53,6 +82,7 @@ function App() {
           </li>
         ))}
       </ul>
+
     </div>
   );
 }
