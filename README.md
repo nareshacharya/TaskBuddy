@@ -1,10 +1,25 @@
 # TaskBuddy
 
+TaskBuddy is a simple React-based task management application. It lets you add, complete and remove tasks.
+
+## Getting Started
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+3. Open the provided local URL in your browser to view the app.
+
 TaskBuddy is a simple React-based task management application. It provides basic features to add, complete, and remove tasks.
 
 ## Getting Started
 
 No build step is required. Simply open `frontend/index.html` in a browser. The page loads React and Babel from CDNs and runs the app.
+
 
 ## Features
 
