@@ -43,3 +43,9 @@ body {
 .task-list li button {
   margin-left: auto;
 }
+
+.task-date {
+  margin-left: 8px;
+  font-size: 0.8em;
+  color: #666;
+}

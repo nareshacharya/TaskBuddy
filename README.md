@@ -14,6 +14,7 @@ TaskBuddy is a simple React-based task management application. It lets you add, 
    ```
 3. Open the provided local URL in your browser to view the app.
 
+- Each task shows the date it was added.
 TaskBuddy is a simple React-based task management application. It provides basic features to add, complete, and remove tasks.
 
 ## Getting Started
