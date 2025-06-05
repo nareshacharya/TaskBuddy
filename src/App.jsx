@@ -7,6 +7,11 @@ function App() {
 
   const addTask = () => {
     if (newTask.trim() === '') return;
+    const task = {
+      text: newTask,
+      completed: false,
+      date: new Date().toLocaleDateString()
+    };
     setTasks([...tasks, { text: newTask, completed: false }]);
     setNewTask('');
   };
@@ -43,6 +48,7 @@ function App() {
               onChange={() => toggleTask(index)}
             />
             <span>{task.text}</span>
+            <small className="task-date">{task.date}</small>
             <button onClick={() => removeTask(index)}>X</button>
           </li>
         ))}
