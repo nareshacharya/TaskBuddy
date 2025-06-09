@@ -46,7 +46,6 @@ function App() {
         />
         <button onClick={addTask}>Add</button>
       </div>
-
       <div className="task-groups">
         {Object.entries(groupedTasks).map(([date, items]) => (
           <div key={date} className="task-group">
@@ -67,7 +66,6 @@ function App() {
           </div>
         ))}
       </div>
-
       <ul className="task-list">
         {tasks.map((task, index) => (
           <li key={index} className={task.completed ? 'completed' : ''}>
@@ -82,7 +80,6 @@ function App() {
           </li>
         ))}
       </ul>
-
     </div>
   );
 }
